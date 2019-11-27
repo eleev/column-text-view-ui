@@ -6,7 +6,7 @@
 [![SPM](https://img.shields.io/badge/SPM-Supported-red.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 
-**Last Update: 16/November/2019.**
+**Last Update: 27/November/2019.**
 
 ![](cover-preview.png)
 
@@ -19,8 +19,38 @@
 Please wait while the `.gif` files are loading...
 
 # 🍱 Features
+- **Configurable**
+    - There are a number of configurable properties and you can use, such as, you can specify the number of columns for the supplied text, specify column spacing, paddings and other properties
+- **Adaptive**
+    - The underlying text container adjusts its size to support the needed amount of space for the supplied text
+-  **SwiftUI Compatable**
+    - You can use a dedicated wrapper called `ColumnedTextView` to use the componet with `SwiftUI`   
+- **Ease of Use**
+    - Instantiate a single instane of `ColumnTextView` or `ColumnedTextView` (for `SwiftUI` ), setup the parent view and supply some text
+- **Designable and Inspectable**
+    - You can use `.storyboard` or `.xib` files to configure the component without touching code (well, almost)
 
 # 📚 Usage
+
+The first thing you need to do is to prepare the UI component. The following example demostrates the programmatic approach, where the component is instantiated without `.storyboard` or `.xib` outlets:
+
+```swift
+// 1
+let columnTextView = ColumnTextView(frame: view.bounds)
+columnTextView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+columnTextView.backgroundColor = .white
+parentView.addSubview(columnTextView)
+
+// 2
+columnTextView.attributedText = attributedString
+// 3
+columnTextView.columns = .columns(2)
+```
+- (1) The first part is instantiation and setup. Here we have pretty usual things happenning, nothing exotic 🌴.
+- (2) The next part is about the text `attachment`. You simply create an instance of `NSAttributedString`, configure it as you'd like and that's it. 
+- (3) You can specify the way the columns should be created. Here you have two options: to use `.absolute(***UInt16***)`, where the associated parameter is a single column `width` in points or to use `.columns(***UInt16***)`, where the associated parameter is a positive integer number that specifies the exact number of columns that should be created for the current screen's `width`.
+
+You can change the `attributedText` property, the results will be correspondigly reflected and specify all `four` paddings for `top, right, bottom and left` sides of the component. 
 
 # 🏗 Installation
 
