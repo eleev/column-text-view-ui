@@ -1,12 +1,13 @@
 # column-text-view-ui [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-[![Platform](https://img.shields.io/badge/platform-iOS_12-yellow.svg)]()
-[![Platform](https://img.shields.io/badge/platform-iPadOS_12-darkyellow.svg)]()
-[![Language](https://img.shields.io/badge/language-Swift_5.1-orange.svg)]()
+[![Build](https://github.com/jvirus/column-text-view-ui/workflows/Build/badge.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-iOS_12-yellow.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-iPadOS_12-darkyellow.svg)]()
+[![Language](https://img.shields.io/badge/Language-Swift_5.1-orange.svg)]()
 [![SPM](https://img.shields.io/badge/SPM-Supported-red.svg)]()
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
-**Last Update: 27/November/2019.**
+**Last Update: 27/December/2019.**
 
 ![](cover-preview.png)
 
