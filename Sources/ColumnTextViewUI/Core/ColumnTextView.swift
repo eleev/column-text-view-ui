@@ -93,10 +93,11 @@ final public class ColumnTextView: UIView {
     
     // MARK: - Initializers
     
-    public override init(frame: CGRect) {
+    public init(frame: CGRect, _ columns: WrapperTextView.ColumnUnit) {
+        self.columns = columns
         super.init(frame: frame)
         
-        columnWrapperTextView = .init(frame: frame, columns: .columns(4))
+        columnWrapperTextView = .init(frame: frame, columns: columns)
         
         scrollView = UIScrollView(frame: frame)
         scrollView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -109,6 +110,17 @@ final public class ColumnTextView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Overrides
+    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+
+        columnWrapperTextView.frame = frame
+        columnWrapperTextView.bounds = bounds
+        columnWrapperTextView.layoutSubviews()
+        updateScrollViewContentSize()
     }
     
     // MARK: - Private Utility
