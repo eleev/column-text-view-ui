@@ -19,6 +19,7 @@ public struct ColumnedTextView: View {
     @State public private(set) var font: UIFont? = nil
     @State public private(set) var fontSize: CGFloat = 0.0
     @State public private(set) var textColor: UIColor? = nil
+    @State public private(set) var column: WrapperTextView.ColumnUnit
         
     // MARK: - Conformance to View protocol
     
@@ -29,7 +30,8 @@ public struct ColumnedTextView: View {
                 attributedString: self.attributedString,
                 font: self.font,
                 fontSize: self.fontSize,
-                textColor: self.textColor
+                textColor: self.textColor,
+                column: self.column
             )
         }
     }
@@ -41,7 +43,7 @@ public struct ColumnedTextView: View {
 struct ColumnedTextView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ColumnedTextView(attributedString: text(), fontSize: 18)
+        ColumnedTextView(attributedString: text(), fontSize: 18, column: .columns(2))
             .previewDevice(PreviewDevice(rawValue: "iPhone 11 Pro"))
             .previewDisplayName("iPhone 11 Pro")
         

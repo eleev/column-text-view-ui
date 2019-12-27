@@ -21,13 +21,14 @@ public struct ColumnTextViewRepresentable: UIViewRepresentable {
     @State public private(set) var font: UIFont? = nil
     @State public private(set) var fontSize: CGFloat = 0.0
     @State public private(set) var textColor: UIColor? = nil
+    @State public private(set) var column: WrapperTextView.ColumnUnit
     
     // MARK: - Conformance to UIViewRepresentable protocol
 
     public typealias UIViewType = ColumnTextView
     
     public func makeUIView(context: UIViewRepresentableContext<ColumnTextViewRepresentable>) -> UIViewType {
-        .init(frame: .init(origin: .zero, size: size))
+        .init(frame: .init(origin: .zero, size: size), column)
     }
     
     public func updateUIView(_ uiView: UIViewType, context: UIViewRepresentableContext<ColumnTextViewRepresentable>) {
