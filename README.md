@@ -19,7 +19,7 @@
 # 📺 Demo
 Please wait while the `.gif` files are loading...
 
-<img src="/Assets/textview-ui-ipad.gif" width="49%"> <img src="/Assets/textview-ui-iphone.gif" width="49.7%">
+<img src="/Assets/textview-ui-ipad.gif" width="59%"> <img src="/Assets/textview-ui-iphone.gif" width="40%">
 
 
 # 🍱 Features
