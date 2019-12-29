@@ -9,7 +9,7 @@
 
 **Last Update: 29/December/2019.**
 
-![](cover-preview.png)
+![](/Assets/cover-preview.png)
 
 ### If you like the project, please give it a star ⭐ It will show the creator your appreciation and help others to discover the repo.
 
