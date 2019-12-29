@@ -7,7 +7,7 @@
 [![SPM](https://img.shields.io/badge/SPM-Supported-red.svg)]()
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)]()
 
-**Last Update: 27/December/2019.**
+**Last Update: 29/December/2019.**
 
 ![](cover-preview.png)
 
@@ -18,6 +18,9 @@
 
 # 📺 Demo
 Please wait while the `.gif` files are loading...
+
+<img src="/Assets/textview-ui-ipad.gif" width="61%"> <img src="/Assets/textview-ui-iphone.gif" width="37.7%">
+
 
 # 🍱 Features
 - **Configurable**
@@ -37,19 +40,16 @@ The first thing you need to do is to prepare the UI component. The following exa
 
 ```swift
 // 1
-let columnTextView = ColumnTextView(frame: view.bounds)
+let columnTextView = ColumnTextView(frame: view.bounds, .columns(2))
 columnTextView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 columnTextView.backgroundColor = .white
 parentView.addSubview(columnTextView)
 
 // 2
 columnTextView.attributedText = attributedString
-// 3
-columnTextView.columns = .columns(2)
 ```
-- (1) The first part is instantiation and setup. Here we have pretty usual things happenning, nothing exotic 🌴.
+- (1) The first part is instantiation and setup. Here we have pretty usual things happenning, nothing exotic 🌴. You can specify the way the columns should be created. Here you have two options: to use `.absolute(***UInt16***)`, where the associated parameter is a single column `width` in points or to use `.columns(***UInt16***)`, where the associated parameter is a positive integer number that specifies the exact number of columns that should be created for the current screen's `width`.
 - (2) The next part is about the text `attachment`. You simply create an instance of `NSAttributedString`, configure it as you'd like and that's it. 
-- (3) You can specify the way the columns should be created. Here you have two options: to use `.absolute(***UInt16***)`, where the associated parameter is a single column `width` in points or to use `.columns(***UInt16***)`, where the associated parameter is a positive integer number that specifies the exact number of columns that should be created for the current screen's `width`.
 
 You can change the `attributedText` property, the results will be correspondigly reflected and specify all `four` paddings for `top, right, bottom and left` sides of the component. 
 
